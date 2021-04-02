@@ -1,4 +1,5 @@
 import pandas as pd
+import numpy as np
 import re
 from datetime import datetime, timedelta
 from datetime import date
@@ -25,7 +26,7 @@ class dfOps:
             inplace dataframe with a new str column
         """
         df['ano_mes'] = (df[ano_col_name].apply(str) + df[mes_col_name].apply(lambda mes: str(mes) if mes > 9 else '0' + str(mes))).apply(int)
-        return 
+        return df['ano_mes']
         
     def try_force_col_types(df, date_match = None, skip_pattern = None,inplace = None, print_progress = None):
         """ 
