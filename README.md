@@ -1,2 +1,2 @@
 # dataOperations
-Python scripts to meke my life easyer.
+Python scripts to make my life easyer.
